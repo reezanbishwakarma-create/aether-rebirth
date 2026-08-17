@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aether Rebirth — Official Website</title>
+  <meta name="description" content="Aether Rebirth — The player-driven open-world MMORPG of life, death, and rebirth. Create your character. Live. Die. Ascend." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#" class="logo" onclick="showSection('home')">
+        <span class="logo-icon">✧</span>
+        <span class="logo-text">Aether Rebirth</span>
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="#" onclick="showSection('home')">Home</a>
+        <a href="#" onclick="showSection('world')">The World</a>
+        <a href="#" onclick="showSection('gods')">The Gods</a>
+        <a href="#" onclick="showSection('create')" class="btn-nav">Create Character</a>
+        <a href="#" onclick="showSection('account')" id="accountNav">Account</a>
+      </div>
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HOME SECTION -->
+  <section id="home" class="section active">
+    <div class="hero">
+      <div class="hero-bg"></div>
+      <div class="hero-content">
+        <h1 class="hero-title">
+          <span class="line">Live.</span>
+          <span class="line">Die.</span>
+          <span class="line accent">Rebirth.</span>
+        </h1>
+        <p class="hero-subtitle">
+          One persistent world. Fifteen super-continents.<br>
+          Unlimited lives. Player-driven destiny.<br>
+          Your story begins the moment you create your character.
+        </p>
+        <div class="hero-cta">
+          <button class="btn btn-primary" onclick="showSection('create')">Begin Your First Life</button>
+          <button class="btn btn-secondary" onclick="showSection('world')">Explore the World</button>
+        </div>
+        <div class="hero-stats">
+          <div class="stat">
+            <span class="stat-num">15</span>
+            <span class="stat-label">Super-Continents</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">12</span>
+            <span class="stat-label">Gods & Goddesses</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">∞</span>
+            <span class="stat-label">Lives</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Features -->
+    <div class="features">
+      <div class="container">
+        <h2 class="section-title">Core Pillars</h2>
+        <div class="feature-grid">
+          <div class="feature-card">
+            <div class="feature-icon">🌍</div>
+            <h3>Single Persistent World</h3>
+            <p>No shards. One seamless planet. Spatial partitioning and interest management keep tens of thousands of players together without fragmentation.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">✨</div>
+            <h3>True Character Freedom</h3>
+            <p>Website-first creation with precise anthropometric constraints. Photo-to-3D, full morphs, side profiles — all synchronized instantly to every client.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🔄</div>
+            <h3>Unlimited Rebirth Cycle</h3>
+            <p>Live a finite life. Die. Meet the 12 Gods. Choose 12 skills. Return as a demi-human and restore your form through cooperation and achievement.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">⚔️</div>
+            <h3>Horizontal Progression</h3>
+            <p>No hard level walls. Skills, reputation, wealth, titles, body restoration, and continental kingship define power. Explore any continent from day one.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">💍</div>
+            <h3>Player-Driven Society</h3>
+            <p>Full economy, real jobs, romance, marriage, family, guilds, kingdoms, and wars. Continental politics and kingship are earned, not given.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">📱</div>
+            <h3>True Cross-Play</h3>
+            <p>Mobile and PC share the same accounts, characters, and world. Input abstraction makes touch and mouse/keyboard both feel native.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WORLD SECTION -->
+  <section id="world" class="section">
+    <div class="container">
+      <h2 class="section-title">The Fifteen Super-Continents</h2>
+      <p class="section-desc">Each continent holds unique climates, cultures, monsters, demi-human populations, 13 hidden Easter eggs, and a King Ability that can be claimed by any player who earns the required achievements.</p>
+      <div class="continent-grid" id="continentGrid">
+        <!-- Filled by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- GODS SECTION -->
+  <section id="gods" class="section">
+    <div class="container">
+      <h2 class="section-title">The Twelve Gods</h2>
+      <p class="section-desc">After death you stand before them. Choose exactly twelve skills. Four secret God-Tier combinations exist — they are never listed and can only be discovered.</p>
+      <div class="gods-grid" id="godsGrid">
+        <!-- Filled by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- CREATE CHARACTER SECTION -->
+  <section id="create" class="section">
+    <div class="container">
+      <h2 class="section-title">Create Your Character</h2>
+      <p class="section-desc">All morphs are constrained to the True Adam / True Eve measurement philosophy. Adjust any value and related features recalculate automatically. Symmetry ≥ 97%.</p>
+
+      <div class="creator-layout">
+        <!-- Preview Panel -->
+        <div class="preview-panel">
+          <div class="character-preview" id="characterPreview">
+            <div class="preview-silhouette" id="previewSilhouette">
+              <div class="face-preview">
+                <div class="eye left"></div>
+                <div class="eye right"></div>
+                <div class="nose"></div>
+                <div class="mouth"></div>
+              </div>
+              <div class="body-preview"></div>
+            </div>
+            <div class="preview-info">
+              <h3 id="previewName">Unnamed</h3>
+              <p id="previewGender">—</p>
+            </div>
+          </div>
+          <div class="preview-actions">
+            <button class="btn btn-secondary btn-sm" onclick="randomizeCharacter()">Randomize</button>
+            <button class="btn btn-secondary btn-sm" onclick="resetCharacter()">Reset</button>
+          </div>
+        </div>
+
+        <!-- Controls Panel -->
+        <div class="controls-panel">
+          <div class="tabs">
+            <button class="tab active" data-tab="identity">Identity</button>
+            <button class="tab" data-tab="face">Face</button>
+            <button class="tab" data-tab="body">Body</button>
+            <button class="tab" data-tab="details">Details</button>
+          </div>
+
+          <div class="tab-content active" id="tab-identity">
+            <div class="form-group">
+              <label>Character Name</label>
+              <input type="text" id="charName" placeholder="Enter name..." maxlength="24" oninput="updatePreview()" />
+            </div>
+            <div class="form-group">
+              <label>Gender</label>
+              <div class="gender-select">
+                <button class="gender-btn active" data-gender="female" onclick="setGender('female')">Female (True Eve)</button>
+                <button class="gender-btn" data-gender="male" onclick="setGender('male')">Male (True Adam)</button>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Life Seed / Backstory</label>
+              <textarea id="lifeSeed" rows="3" placeholder="A short story or goal for your first life..." oninput="updatePreview()"></textarea>
+            </div>
+          </div>
+
+          <div class="tab-content" id="tab-face">
+            <div class="slider-group">
+              <label>Facial Width-Height Ratio <span class="value" id="val-fwhr">1.85</span></label>
+              <input type="range" min="1.60" max="2.10" step="0.01" value="1.85" id="fwhr" oninput="updateMorph(this)" />
+            </div>
+            <div class="slider-group">
+              <label>Canthal Tilt <span class="value" id="val-canthal">3°</span></label>
+              <input type="range" min="-8" max="12" step="0.5" value="3" id="canthal" oninput="updateMorph(this)" />
+            </div>
+            <div class="slider-group">
+              <label>Gonial Angle <span class="value" id="val-gonial">125°</span></label>
+              <input type="range" min="110" max="140" step="1" value="125" id="gonial" oninput="updateMorph(this)" />
+            </div>
+            <div class="slider-group">
+              <label>Facial Thirds Balance <span class="value" id="val-thirds">0.98</span></label>
+              <input type="range" min="0.85" max="1.15" step="0.01" value="0.98" id="thirds" oninput="updateMorph(this)" />
+            </div>
+            <div class="slider-group">
+              <label>Nose Projection <span class="value" id="val-nose">0.55</span></label>
+              <input type="range" min="0.35" max="0.75" step="0.01" value="0.55" id="nose" oninput="updateMorph(this)" />
+            </div>
+            <div class="slider-group">
+              <label>Chin Projection <span class="value" id="val-chin">0.42</span></label>
+              <input type="range" min="0.25" max="0.65" step="0.01" value="0.42" id="chin" oninput="updateMorph(this)" />
+            </div>
+            <div class="slider-group">
+              <label>Eye Size <span class="value" id="val-eyes">0.50</span></label>
+              <input type="range" min="0.30" max="0.70" step="0.01" value="0.50" id="eyes" oninput="updateMorph(this)" />
+            </div>
+            <div class="slider-group">
+              <label>Lip Fullness <span class="value" id="val-lips">0.48</span></label>
+              <input type="range" min="0.25" max="0.75" step="0.01" value="0.48" id="lips" oninput="updateMorph(this)" />
+            </div>
+          </div>
+
+          <div class="tab-content" id="tab-body">
+            <div class="slider-group">
+              <label>Height (cm) <span class="value" id="val-height">168</span></label>
+              <input type="range" min="150" max="195" step="1" value="168" id="height" oninput="updateMorph(this)" />
+            </div>
+            <div class="slider-group">
+              <label>Shoulder Width <span class="value" id="val-shoulders">0.52</span></label>
+              <input type="range" min="0.35" max="0.70" step="0.01" value="0.52" id="shoulders" oninput="updateMorph(this)" />
+            </div>
+            <div class="slider-group">
+              <label>Waist-Hip Ratio <span class="value" id="val-whr">0.72</span></label>
+              <input type="range" min="0.60" max="0.95" step="0.01" value="0.72" id="whr" oninput="updateMorph(this)" />
+            </div>
+            <div class="slider-group">
+              <label>Muscle Definition <span class="value" id="val-muscle">0.35</span></label>
+              <input type="range" min="0.10" max="0.90" step="0.01" value="0.35" id="muscle" oninput="updateMorph(this)" />
+            </div>
+            <div class="slider-group">
+              <label>Limb Proportions <span class="value" id="val-limbs">1.00</span></label>
+              <input type="range" min="0.85" max="1.15" step="0.01" value="1.00" id="limbs" oninput="updateMorph(this)" />
+            </div>
+          </div>
+
+          <div class="tab-content" id="tab-details">
+            <div class="form-group">
+              <label>Skin Tone</label>
+              <input type="color" id="skinTone" value="#e8b89d" oninput="updatePreview()" />
+            </div>
+            <div class="form-group">
+              <label>Hair Color</label>
+              <input type="color" id="hairColor" value="#2c1810" oninput="updatePreview()" />
+            </div>
+            <div class="form-group">
+              <label>Eye Color</label>
+              <input type="color" id="eyeColor" value="#3a5f8a" oninput="updatePreview()" />
+            </div>
+            <div class="slider-group">
+              <label>Hair Length <span class="value" id="val-hairlen">0.55</span></label>
+              <input type="range" min="0.05" max="1.00" step="0.01" value="0.55" id="hairlen" oninput="updateMorph(this)" />
+            </div>
+            <div class="form-group">
+              <label>Scars / Marks</label>
+              <select id="scars" onchange="updatePreview()">
+                <option value="none">None</option>
+                <option value="cheek">Cheek Scar</option>
+                <option value="brow">Brow Scar</option>
+                <option value="lip">Lip Scar</option>
+                <option value="multiple">Multiple Faint Marks</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="creator-footer">
+            <button class="btn btn-primary btn-full" onclick="finalizeCharacter()">Save Character & Enter the World</button>
+            <p class="sync-note">Character data is stored locally for this prototype and will sync to the game client when available.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACCOUNT SECTION -->
+  <section id="account" class="section">
+    <div class="container narrow">
+      <h2 class="section-title">Your Account</h2>
+      <div id="accountPanel">
+        <!-- Filled by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <span class="logo-icon">✧</span> Aether Rebirth
+        </div>
+        <p>© 2026 Aether Rebirth. Player-driven. Unlimited lives. One world.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
